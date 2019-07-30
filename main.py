@@ -40,6 +40,7 @@ def run(config):
         else:
             curr_run = 'run%i' % (max(exst_run_nums) + 1)
     run_dir = model_dir / curr_run
+    print('Run directory is {}'.format(run_dir))
     log_dir = run_dir / 'logs'
     os.makedirs(log_dir)
     logger = SummaryWriter(str(log_dir))
